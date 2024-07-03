@@ -1,15 +1,14 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <Image
+      <img
         src="./logo.png"
         alt="Rafaela Sambiasse"
         className="dark:invert"
-        width={1080}
-        height={600}
-        priority
+        width="auto"
+        height="auto"
         />
         <p className="text-xl">Em contrução... 😊</p>
     </main>
