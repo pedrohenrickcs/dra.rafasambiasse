@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #ffffff;
-  background: #c27e7e
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg-banner {
+  background-image: url('../assets/banner.png');
+  height: 470px;
 }
