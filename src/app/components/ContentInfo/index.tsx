@@ -8,7 +8,7 @@ export const ContentInfo = () => {
           Seu sorriso é a nossa maior prioridade
         </h1>
       </div>
-      <div className="px-5 md:px-10 mt-8 md:h-40 flex flex-col justify-center xl:border-r">
+      <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center xl:border-r">
         <span className="flex justify-center pb-4">
           <FaAward size={40} />
         </span>
@@ -22,7 +22,7 @@ export const ContentInfo = () => {
           e a satisfação de nossos pacientes.
         </p>
       </div>
-      <div className="px-5 md:px-10 mt-8 md:h-40 flex flex-col justify-center xl:border-r">
+      <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center xl:border-r">
         <span className="flex justify-center pb-4">
           <FaTooth size={40} />
         </span>
@@ -34,7 +34,7 @@ export const ContentInfo = () => {
           resultados estéticos e funcionais excepcionais.
         </p>
       </div>
-      <div className="px-5 md:px-10 mt-8 md:h-40 flex flex-col justify-center">
+      <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center">
         <span className="flex justify-center pb-4">
           <FaRegHeart size={40} />
         </span>
