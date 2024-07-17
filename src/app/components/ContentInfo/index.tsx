@@ -24,7 +24,7 @@ export const ContentInfo = () => {
       </div>
       <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center xl:border-r">
         <span className="flex justify-center pb-4">
-          <FaTooth size={40} />
+          <FaRegHeart size={40} />
         </span>
 
         <h2 className="text-xl font-medium">Atendimento Humanizado</h2>
@@ -36,7 +36,7 @@ export const ContentInfo = () => {
       </div>
       <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center">
         <span className="flex justify-center pb-4">
-          <FaRegHeart size={40} />
+          <FaTooth size={40} />
         </span>
 
         <h2 className="text-xl font-medium">Atendimento Personalizado</h2>
