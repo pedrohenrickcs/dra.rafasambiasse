@@ -29,9 +29,9 @@ export const ContentInfo = () => {
 
         <h2 className="text-xl font-medium">Atendimento Humanizado</h2>
         <p className="text-base mt-4">
-          Cada tratamento é planejado de acordo com as necessidades específicas
-          de cada paciente, oferecendo soluções personalizadas que garantem
-          resultados estéticos e funcionais excepcionais.
+          Cada paciente é único. Adaptamos nosso atendimento para atender às
+          suas necessidades e preferências específicas, garantindo que você se
+          sinta confortável e seguro durante todo o processo.
         </p>
       </div>
       <div className="md:px-10 mt-8 md:h-40 flex flex-col justify-center">
