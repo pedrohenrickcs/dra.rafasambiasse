@@ -13,7 +13,7 @@ const Button = ({ type }: ButtonProps) => {
         target="_blank"
       >
         <FaWhatsapp size={20} />
-        <span className="pl-2 text-sm">Entre em contato</span>
+        <span className="pl-2 text-sm">Agende sua avaliação</span>
       </a>
     </div>
   ) : (
@@ -24,7 +24,7 @@ const Button = ({ type }: ButtonProps) => {
         target="_blank"
       >
         <FaWhatsapp size={20} />
-        <span className="pl-2 text-sm">Entre em contato</span>
+        <span className="pl-2 text-sm">Agende sua avaliação</span>
       </a>
     </div>
   )
