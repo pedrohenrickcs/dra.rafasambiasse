@@ -1,8 +1,10 @@
 import { Banner } from './components/Banner'
-import { items } from './components/Banner/mock'
 import { ContentInfo } from './components/ContentInfo'
+import { DualContent } from './components/DualContent'
+
+import { items } from './components/Banner/mock'
 import { infos } from './components/ContentInfo/mock'
-import DualContent from './components/DualContent'
+import { infosContent } from './components/DualContent/mock'
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
 
       <div className="container ">
         <ContentInfo items={infos} />
-        <DualContent />
+        <DualContent items={infosContent} />
       </div>
     </main>
   )

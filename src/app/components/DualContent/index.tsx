@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Button from '../common/Button'
 
-const DualContent = () => {
+export const DualContent = () => {
   return (
     <div className="px-6 py-12 text-center flex flex-col md:flex-row items-center justify-center md:justify-around text-black-text-color md:text-left">
       <div className="w-full md:w-1/2">
-        <h2 className="text-4xl font-bold">Muito Bem-vindos!</h2>
+        <h2 className="text-4xl font-bold">Muito bem-vindos!</h2>
         <p className="py-4">
           Sou a Dra. Rafaela, dentista com anos de experiência dedicado a cuidar
           da sua saúde bucal com atenção, profissionalismo e empatia. Estou aqui
@@ -37,5 +37,3 @@ const DualContent = () => {
     </div>
   )
 }
-
-export default DualContent
