@@ -1,23 +1,22 @@
 import Image from 'next/image'
 import Button from '../common/Button'
 
-export const DualContent = () => {
+export type DualContentProps = {
+  items: {
+    title: string
+    description: string
+  }[]
+}
+
+export const DualContent = ({ items }: DualContentProps) => {
   return (
     <div className="px-6 py-12 text-center flex flex-col md:flex-row items-center justify-center md:justify-around text-black-text-color md:text-left">
       <div className="w-full md:w-1/2">
-        <h2 className="text-4xl font-bold">Muito bem-vindos!</h2>
-        <p className="py-4">
-          Sou a Dra. Rafaela, dentista com anos de experiência dedicado a cuidar
-          da sua saúde bucal com atenção, profissionalismo e empatia. Estou aqui
-          para transformar seu sorriso, proporcionando tratamentos
-          personalizados que atendem às suas necessidades e expectativas.
-          <br />
-          <br />
-          Acredito que cada paciente merece um atendimento individualizado e
-          humanizado. Meu objetivo é não apenas tratar problemas dentários, mas
-          também promover a saúde bucal de forma integral, educando e prevenindo
-          para garantir sorrisos saudáveis e duradouros.
-        </p>
+        <h2 className="text-4xl font-bold">{items[0].title}</h2>
+        <p
+          className="py-4"
+          dangerouslySetInnerHTML={{ __html: items[0].description }}
+        />
         <div className="hidden md:flex">
           <Button type="primary" />
         </div>
