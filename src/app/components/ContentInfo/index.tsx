@@ -24,7 +24,7 @@ const iconMapping: { [key: string]: React.ComponentType<IconBaseProps> } = {
 
 export const ContentInfo = ({ items }: BannerProps) => {
   return (
-    <div className="flex text-center flex-col xl:flex-row py-16 items-center bg-primary-bg-color text-primary-text-color md:-mt-10">
+    <div className="container flex text-center flex-col xl:flex-row py-16 items-center bg-primary-bg-color text-primary-text-color md:-mt-10">
       <div className="md:w-1/2 text-primary-text-color md:text-black-text-color md:hidden">
         <h1 className="text-2xl md:text-5xl font-bold">{items[0].title}</h1>
       </div>
