@@ -19,7 +19,7 @@ const Button = ({ type }: ButtonProps) => {
   ) : (
     <div className="py-8">
       <a
-        className="text-xl px-8 py-4 min-w-[160px] inline-flex text-center bg-white text-primary-bg-color hover:text-white hover:bg-primary-bg-color border border-violet-600 rounded active:text-violet-500  focus:outline-none focus:ring transition-colors"
+        className="text-xl px-8 py-4 min-w-[160px] inline-flex text-center bg-white text-primary-bg-color hover:text-white-text-color hover:bg-primary-bg-color border border-violet-600 rounded active:text-violet-500  focus:outline-none focus:ring transition-colors"
         href="https://wa.me/5511987654784"
         target="_blank"
       >

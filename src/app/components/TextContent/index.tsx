@@ -1,39 +1,39 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import Slider from 'react-slick';
-import Modal from '../common/Modal';
+import { useState } from 'react'
+import Slider from 'react-slick'
+import Modal from '../common/Modal'
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export type ItemsContent = {
-  title: string;
-  description: string;
-};
+  title: string
+  description: string
+}
 
 export type TextContentInfos = {
-  title: string;
-  items: ItemsContent[];
-};
+  title: string
+  items: ItemsContent[]
+}
 
 export type TextContentProps = {
-  items: TextContentInfos[];
-};
+  items: TextContentInfos[]
+}
 
 export const TextContent = ({ items }: TextContentProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState<ItemsContent | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedItem, setSelectedItem] = useState<ItemsContent | null>(null)
 
   const openModal = (item: ItemsContent) => {
-    setSelectedItem(item);
-    setIsModalOpen(true);
-  };
+    setSelectedItem(item)
+    setIsModalOpen(true)
+  }
 
   const closeModal = () => {
-    setSelectedItem(null);
-    setIsModalOpen(false);
-  };
+    setSelectedItem(null)
+    setIsModalOpen(false)
+  }
 
   const settings = {
     dots: true,
@@ -48,18 +48,18 @@ export const TextContent = ({ items }: TextContentProps) => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
 
   return (
     <div className="w-full bg-primary-bg-color px-6 py-12 text-center flex flex-col items-center justify-center md:justify-around text-white-bg-color md:text-left">
@@ -73,7 +73,9 @@ export const TextContent = ({ items }: TextContentProps) => {
                 className="bg-white-bg-color text-secondary-text-color rounded-xl p-4 m-4 cursor-pointer"
                 onClick={() => openModal(item)}
               >
-                <h3 className="text-xl font-medium text-center">{item.title}</h3>
+                <h3 className="text-xl font-medium text-center">
+                  {item.title}
+                </h3>
                 <div className="hidden md:flex">{item.description}</div>
               </div>
             </div>
@@ -92,5 +94,5 @@ export const TextContent = ({ items }: TextContentProps) => {
         </Modal>
       )}
     </div>
-  );
-};
+  )
+}

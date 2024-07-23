@@ -11,6 +11,7 @@ const config: Config = {
       'primary-bg-color': '#c27e7e',
       'secondary-bg-color': '#f7f6f4',
       'white-bg-color': '#ffffff',
+      'black-bg-color': '#3E4140',
 
       'primary-text-color': '#ffffff',
       'secondary-text-color': '#c27e7e',

@@ -7,6 +7,7 @@ import { Banner } from './components/Banner'
 import { ContentInfo } from './components/ContentInfo'
 import { DualContent } from './components/DualContent'
 import { TextContent } from './components/TextContent'
+import { ContentAction } from './components/ContentAction'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ContentInfo items={infos} />
       <DualContent items={infosContent} />
       <TextContent items={infosTextContent} />
+      <ContentAction />
     </main>
   )
 }
