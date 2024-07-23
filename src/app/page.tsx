@@ -1,7 +1,7 @@
 import { items } from './components/Banner/mock'
 import { infos } from './components/ContentInfo/mock'
 import { infosContent } from './components/DualContent/mock'
-import { infosTextContent } from './components/TextContent/mock'
+import { infosBeforeAfter, infosTextContent } from './components/TextContent/mock'
 
 import { Banner } from './components/Banner'
 import { ContentInfo } from './components/ContentInfo'
@@ -18,6 +18,7 @@ export default function Home() {
       <DualContent items={infosContent} />
       <TextContent items={infosTextContent} />
       <ContentAction />
+      <TextContent items={infosBeforeAfter} />
     </main>
   )
 }

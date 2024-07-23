@@ -1,6 +1,8 @@
 export const infosTextContent = [
   {
     title: 'Especialidades',
+    bgColor: 'bg-primary-bg-color',
+    textColor: 'text-white-bg-color',
     items: [
       {
         title: 'Ortodontia',
@@ -26,6 +28,25 @@ export const infosTextContent = [
         title: 'Estética Dental',
         description:
           'Trabalhamos com técnicas avançadas para melhorar a aparência dos seus dentes e gengivas, proporcionando harmonia e beleza ao seu rosto. Oferecemos procedimentos como facetas, lentes de contato dental, gengivoplastia e muito mais.',
+      },
+    ],
+  },
+]
+
+export const infosBeforeAfter = [
+  {
+    title: 'Alguns de nossos Resultados',
+    bgColor: 'bg-white-bg-color',
+    textColor: 'text-secondary-text-color',
+    items: [
+      {
+        image: '/images/img_01.jpg',
+      },
+      {
+        image: '/images/img_01.jpg',
+      },
+      {
+        image: '/images/img_01.jpg',
       },
     ],
   },
