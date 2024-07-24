@@ -43,10 +43,16 @@ export const infosBeforeAfter = [
         image: '/images/img_01.jpg',
       },
       {
-        image: '/images/img_01.jpg',
+        image: '/images/img_03.jpg',
       },
       {
-        image: '/images/img_01.jpg',
+        image: '/images/img_04.jpg',
+      },
+      {
+        image: '/images/img_05.jpg',
+      },
+      {
+        image: '/images/img_06.jpg',
       },
     ],
   },
