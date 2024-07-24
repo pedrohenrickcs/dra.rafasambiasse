@@ -25,7 +25,7 @@ export const DualContent = ({ items }: DualContentProps) => {
       </div>
       <div className="w-full md:w-1/4">
         <Image
-          src="/me_2.jpg"
+          src="/me_3.jpg"
           width={300}
           height={300}
           alt="Rafaela Sambiasse"
