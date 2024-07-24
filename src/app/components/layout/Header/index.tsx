@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 // import { useState } from 'react'
-import { FaTimes, FaBars } from 'react-icons/fa'
-import { Link as ScrollLink } from 'react-scroll'
+// import { FaTimes, FaBars } from 'react-icons/fa'
+// import { Link as ScrollLink } from 'react-scroll'
 
 const Header = () => {
   // const [navOpen, setNavOpen] = useState(false)
