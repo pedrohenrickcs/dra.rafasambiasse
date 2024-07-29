@@ -23,9 +23,10 @@ export type TextContentInfos = {
 
 export type TextContentProps = {
   items: TextContentInfos[]
+  id?: string
 }
 
-export const TextContent = ({ items }: TextContentProps) => {
+export const TextContent = ({ items, id }: TextContentProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedItem, setSelectedItem] = useState<ItemsContent | null>(null)
 
@@ -68,6 +69,7 @@ export const TextContent = ({ items }: TextContentProps) => {
   return (
     <div
       className={`w-full ${items[0].bgColor} px-6 py-12 text-center flex flex-col items-center justify-center md:justify-around ${items[0].textColor} md:text-left`}
+      id={id}
     >
       <h2 className="text-4xl font-bold">{items[0].title}</h2>
 

@@ -30,6 +30,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           display: flex;
           align-items: center;
           justify-content: center;
+          z-index: 10;
         }
         .modal-content {
           background: white;

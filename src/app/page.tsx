@@ -22,10 +22,10 @@ export default function Home() {
       <Banner items={items} />
 
       <ContentInfo items={infos} />
-      <DualContent items={infosContent} />
-      <TextContent items={infosTextContent} />
+      <DualContent items={infosContent} id="about" />
+      <TextContent items={infosTextContent} id="specialty" />
       <ContentAction />
-      <TextContent items={infosBeforeAfter} />
+      <TextContent items={infosBeforeAfter} id="result" />
     </main>
   )
 }

@@ -8,11 +8,15 @@ export type DualContent = {
 
 export type DualContentProps = {
   items: DualContent[]
+  id?: string
 }
 
-export const DualContent = ({ items }: DualContentProps) => {
+export const DualContent = ({ items, id }: DualContentProps) => {
   return (
-    <div className="container px-6 py-12 text-center flex flex-col md:flex-row items-center justify-center md:justify-around text-black-text-color md:text-left">
+    <div
+      className="container px-6 py-12 text-center flex flex-col md:flex-row items-center justify-center md:justify-around text-black-text-color md:text-left"
+      id={id}
+    >
       <div className="w-full md:w-1/2">
         <h2 className="text-2xl md:text-4xl font-bold">{items[0].title}</h2>
         <p
