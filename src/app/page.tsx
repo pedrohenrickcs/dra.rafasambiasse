@@ -14,6 +14,7 @@ import { ContentInfo } from '../components/ContentInfo'
 import { DualContent } from '../components/DualContent'
 import { TextContent } from '../components/TextContent'
 import { ContentAction } from '../components/ContentAction'
+import { Footer } from '@/components/layout/Footer'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <TextContent items={infosTextContent} id="specialty" />
       <ContentAction />
       <TextContent items={infosBeforeAfter} id="result" />
+      <Footer />
     </main>
   )
 }

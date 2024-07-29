@@ -59,7 +59,7 @@ const Header = (): JSX.Element => {
         <ul
           className={`md:flex md:right-10 bg-white-bg-color transition-transform transform md:transform-none ${navOpen ? 'translate-y-0' : 'translate-x-full'} bg-white absolute md:fixed ${scrollPosition >= 100 ? 'top-20' : 'top-44'} md:top-auto md:left-auto left-0 w-full h-screen md:w-auto md:h-auto py-3`}
         >
-          <li className={'p-5 md:hover:underline md:shadow-none shadow-md'}>
+          <li className={'p-4 md:hover:underline md:shadow-none shadow-md'}>
             <ScrollLink
               to="about"
               smooth={true}
@@ -71,7 +71,7 @@ const Header = (): JSX.Element => {
               Sobre mim
             </ScrollLink>
           </li>
-          <li className="p-5 md:hover:underline md:shadow-none shadow-md">
+          <li className="p-4 md:hover:underline md:shadow-none shadow-md">
             <ScrollLink
               to="specialty"
               smooth={true}
@@ -83,7 +83,7 @@ const Header = (): JSX.Element => {
               Especialidades
             </ScrollLink>
           </li>
-          <li className="p-5 md:hover:underline md:shadow-none shadow-md">
+          <li className="p-4 md:hover:underline md:shadow-none shadow-md">
             <ScrollLink
               to="result"
               smooth={true}

@@ -44,7 +44,7 @@ export const ContentInfo = ({ items, id }: BannerProps) => {
               {IconComponent ? <IconComponent size={40} /> : null}
             </div>
             <h3 className="text-xl mb-2 font-medium">{item.title}</h3>
-            <p className="text-base">{item.description}</p>
+            <p className="text-base px-2">{item.description}</p>
           </div>
         )
       })}
