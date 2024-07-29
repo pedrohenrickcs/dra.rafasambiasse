@@ -71,7 +71,7 @@ export const TextContent = ({ items, id }: TextContentProps) => {
       className={`w-full ${items[0].bgColor} px-6 py-12 text-center flex flex-col items-center justify-center md:justify-around ${items[0].textColor} md:text-left`}
       id={id}
     >
-      <h2 className="text-4xl font-bold">{items[0].title}</h2>
+      <h2 className="text-2xl md:text-4xl font-bold">{items[0].title}</h2>
 
       <div className="container p-6 md:px-0">
         {!items[0]?.items[0].image ? (
