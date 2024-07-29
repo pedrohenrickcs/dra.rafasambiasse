@@ -82,7 +82,7 @@ export const TextContent = ({ items, id }: TextContentProps) => {
                   className="bg-white-bg-color text-secondary-text-color rounded-xl p-4 m-4 cursor-pointer"
                   onClick={() => openModal(item)}
                 >
-                  <h3 className="text-xl font-medium text-center">
+                  <h3 className="text-sm md:text-xl font-medium text-center">
                     {item.title}
                   </h3>
                   <div className="hidden md:flex">{item.description}</div>
