@@ -36,7 +36,7 @@ export const Footer = () => {
           <h2 className="text-lg font-bold mb-2">Redes sociais</h2>
           <div className="flex space-x-4">
             <a
-              href="instagram.com/dra.rafasambiasse/"
+              href="https://instagram.com/dra.rafasambiasse/"
               target="_blank"
               aria-label="Instagram"
               className="hover:text-gray-400"
