@@ -15,11 +15,12 @@ import { DualContent } from '../components/DualContent'
 import { TextContent } from '../components/TextContent'
 import { ContentAction } from '../components/ContentAction'
 import { Footer } from '@/components/layout/Footer'
+import { menuItems } from '@/components/layout/Header/mock'
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
-      <Header />
+      <Header menuItems={menuItems} />
       <Banner items={items} />
 
       <ContentInfo items={infos} />

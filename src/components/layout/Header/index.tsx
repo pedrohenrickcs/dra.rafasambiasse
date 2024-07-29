@@ -7,7 +7,20 @@ import { useState } from 'react'
 import { FaTimes, FaBars } from 'react-icons/fa'
 import { Link as ScrollLink } from 'react-scroll'
 
-const Header = (): JSX.Element => {
+export type Items = {
+  id: string
+  text: string
+}
+
+export type MenuItems = {
+  menu: Items[]
+}
+
+export type MenuContent = {
+  menuItems: MenuItems[]
+}
+
+const Header = ({ menuItems }: MenuContent) => {
   const [navOpen, setNavOpen] = useState(false)
 
   const toggleNav = () => {
@@ -17,6 +30,7 @@ const Header = (): JSX.Element => {
   const closeNav = () => {
     setNavOpen(false)
   }
+
   const { scrollPosition } = useScroll()
 
   return (
@@ -59,46 +73,23 @@ const Header = (): JSX.Element => {
         <ul
           className={`md:flex md:right-10 bg-white-bg-color transition-transform transform md:transform-none ${navOpen ? 'translate-y-0' : 'translate-x-full'} bg-white absolute md:fixed ${scrollPosition >= 100 ? 'top-20' : 'top-44'} md:top-auto md:left-auto left-0 w-full h-screen md:w-auto md:h-auto py-3`}
         >
-          <li
-            className={
-              'p-4 md:hover:text-primary-bg-color md:shadow-none shadow-md'
-            }
-          >
-            <ScrollLink
-              to="about"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="cursor-pointer"
-              onClick={closeNav}
+          {menuItems[0].menu.map((menuItem) => (
+            <li
+              key={menuItem.id}
+              className="p-4 md:hover:text-primary-bg-color md:shadow-none shadow-md"
             >
-              Sobre mim
-            </ScrollLink>
-          </li>
-          <li className="p-4 md:hover:text-primary-bg-color md:shadow-none shadow-md">
-            <ScrollLink
-              to="specialty"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="cursor-pointer"
-              onClick={closeNav}
-            >
-              Especialidades
-            </ScrollLink>
-          </li>
-          <li className="p-4 md:hover:text-primary-bg-color md:shadow-none shadow-md">
-            <ScrollLink
-              to="result"
-              smooth={true}
-              duration={500}
-              offset={-100}
-              className="cursor-pointer"
-              onClick={closeNav}
-            >
-              Resultados
-            </ScrollLink>
-          </li>
+              <ScrollLink
+                to={menuItem.id}
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="cursor-pointer"
+                onClick={closeNav}
+              >
+                {menuItem.text}
+              </ScrollLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
