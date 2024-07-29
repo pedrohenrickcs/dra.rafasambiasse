@@ -11,7 +11,7 @@ export const Footer = () => {
         </div>
         <div className="mb-6 md:mb-0 flex justify-center flex-col items-center text-center">
           <h2 className="text-lg font-bold mb-2">Contato</h2>
-          <div className="flex justify-center md:justify-start items-center m-2">
+          <div className="flex justify-center md:justify-start items-center m-1">
             <MdEmail size={20} color="#ffffff" />
             <a
               href="mailto:rafa_sambiasse@hotmail.com"
@@ -21,7 +21,7 @@ export const Footer = () => {
               rafa_sambiasse@hotmail.com
             </a>
           </div>
-          <div className="flex justify-center md:justify-start items-center m-2">
+          <div className="flex justify-center md:justify-start items-center m-1">
             <FaWhatsapp size={20} color="#ffffff" />
             <a
               href="https://wa.me/5511987654784"
