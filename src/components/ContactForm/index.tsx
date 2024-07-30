@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form'
+import InputMask from 'react-input-mask'
 
 export type FormData = {
   name: string
@@ -44,7 +45,7 @@ export const ContactForm = ({ id }: Items) => {
     >
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="w-full max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md bg-primary-bg-color"
+        className="w-full md:w-2/5 mx-auto p-6 rounded-lg shadow-md bg-primary-bg-color"
       >
         <h2 className="text-2xl font-bold mb-4">Entre em contato</h2>
 
@@ -59,10 +60,10 @@ export const ContactForm = ({ id }: Items) => {
             type="text"
             id="name"
             {...register('name', { required: 'Nome é obrigatório' })}
-            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border border- autofill:bg-primary-bg-color sm:text-sm"
           />
           {errors.name && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.name.message}
             </p>
           )}
@@ -88,7 +89,7 @@ export const ContactForm = ({ id }: Items) => {
             className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
           />
           {errors.email && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.email.message}
             </p>
           )}
@@ -102,7 +103,8 @@ export const ContactForm = ({ id }: Items) => {
             Telefone
           </label>
           <div>
-            <input
+            <InputMask
+              mask="(99) 99999-9999"
               type="tel"
               id="phone"
               className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
@@ -116,7 +118,7 @@ export const ContactForm = ({ id }: Items) => {
             />
           </div>
           {errors.phone && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.phone.message}
             </p>
           )}
@@ -130,7 +132,8 @@ export const ContactForm = ({ id }: Items) => {
             CPF
           </label>
           <div>
-            <input
+            <InputMask
+              mask="999.999.999-99"
               {...register('cpf', {
                 required: 'CPF é obrigatório',
                 pattern: {
@@ -140,11 +143,13 @@ export const ContactForm = ({ id }: Items) => {
               })}
               type="text"
               id="cpf"
-              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2
+              bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none
+              focus:border focus:border-primary-500 sm:text-sm"
             />
           </div>
           {errors.cpf && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.cpf.message}
             </p>
           )}
@@ -158,7 +163,8 @@ export const ContactForm = ({ id }: Items) => {
             RG
           </label>
           <div>
-            <input
+            <InputMask
+              mask="99.999.999-9"
               {...register('rg', {
                 required: 'RG é obrigatório',
                 pattern: {
@@ -172,7 +178,9 @@ export const ContactForm = ({ id }: Items) => {
             />
           </div>
           {errors.rg && (
-            <p className="text-xs text-error-text-color">{errors.rg.message}</p>
+            <p className="text-xs text-white-text-color text-left mt-1">
+              {errors.rg.message}
+            </p>
           )}
         </div>
 
@@ -184,7 +192,8 @@ export const ContactForm = ({ id }: Items) => {
             CEP
           </label>
           <div>
-            <input
+            <InputMask
+              mask="99999-999"
               {...register('cep', {
                 required: 'CEP é obrigatório',
                 pattern: {
@@ -198,7 +207,7 @@ export const ContactForm = ({ id }: Items) => {
             />
           </div>
           {errors.cep && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.cep.message}
             </p>
           )}
@@ -217,7 +226,7 @@ export const ContactForm = ({ id }: Items) => {
             className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
           ></textarea>
           {errors.message && (
-            <p className="text-xs text-error-text-color">
+            <p className="text-xs text-white-text-color text-left mt-1">
               {errors.message.message}
             </p>
           )}
