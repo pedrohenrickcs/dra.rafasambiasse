@@ -213,6 +213,8 @@ export const ContactForm = ({ id }: Items) => {
               {...register('birthday', {
                 required: 'Data de nascimento é obrigatório',
                 pattern: {
+                  value:
+                    /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/,
                   message: 'Data de nascimento deve ter o formato 99/99/9999',
                 },
               })}
