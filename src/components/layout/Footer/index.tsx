@@ -14,11 +14,11 @@ export const Footer = () => {
           <div className="flex justify-center md:justify-start items-center m-1">
             <MdEmail size={20} color="#ffffff" />
             <a
-              href="mailto:rafa_sambiasse@hotmail.com"
+              href="mailto:odontologiasambiasse@gmail.com"
               target="_blank"
               className="ml-2"
             >
-              rafa_sambiasse@hotmail.com
+              odontologiasambiasse@gmail.com
             </a>
           </div>
           <div className="flex justify-center md:justify-start items-center m-1">

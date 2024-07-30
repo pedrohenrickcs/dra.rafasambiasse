@@ -1,5 +1,8 @@
+import { useState } from 'react'
+import Image from 'next/image'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import InputMask from 'react-input-mask'
+import Modal from '../common/Modal'
 
 export type FormData = {
   name: string
@@ -22,6 +25,8 @@ export const ContactForm = ({ id }: Items) => {
     formState: { errors },
   } = useForm<FormData>()
 
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     const response = await fetch('/api/contact', {
       method: 'POST',
@@ -32,7 +37,7 @@ export const ContactForm = ({ id }: Items) => {
     })
 
     if (response.ok) {
-      alert('Mensagem enviada com sucesso!')
+      setIsModalOpen(true)
     } else {
       alert('Erro ao enviar mensagem.')
     }
@@ -47,7 +52,17 @@ export const ContactForm = ({ id }: Items) => {
         onSubmit={handleSubmit(onSubmit)}
         className="w-full md:w-2/5 mx-auto p-6 rounded-lg shadow-md bg-primary-bg-color"
       >
-        <h2 className="text-2xl font-bold mb-4">Entre em contato</h2>
+        <Image
+          src="/logo_v2.png"
+          alt="Logo"
+          width={250}
+          height={250}
+          className="margin-auto"
+        />
+        <h2 className="text-2xl font-medium my-4">Agende sua consulta:</h2>
+        <h2 className="text-1xl font-medium mb-4">
+          Preencha o formulário para agendar sua avaliação
+        </h2>
 
         <div className="mb-4">
           <label
@@ -239,6 +254,22 @@ export const ContactForm = ({ id }: Items) => {
           Enviar
         </button>
       </form>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2 className="text-2xl font-bold mb-4 text-primary-bg-color">
+          Mensagem enviada!
+        </h2>
+        <p className="text-primary-bg-color">
+          Seu formulário foi enviado com sucesso. Em breve entraremos em
+          contato.
+        </p>
+        <button
+          onClick={() => setIsModalOpen(false)}
+          className="mt-4 px-4 py-2 bg-primary-bg-color text-white rounded-md"
+        >
+          Fechar
+        </button>
+      </Modal>
     </div>
   )
 }
