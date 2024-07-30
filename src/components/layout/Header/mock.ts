@@ -13,6 +13,10 @@ export const menuItems = [
         id: 'result',
         text: 'Resultados',
       },
+      {
+        id: 'form',
+        text: 'Contato',
+      },
     ],
   },
 ]
