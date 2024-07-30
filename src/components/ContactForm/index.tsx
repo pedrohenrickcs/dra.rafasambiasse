@@ -10,6 +10,7 @@ export type FormData = {
   phone: string
   cpf: string
   rg: string
+  birthday: string
   cep: string
   message: string
 }
@@ -57,7 +58,7 @@ export const ContactForm = ({ id }: Items) => {
           alt="Logo"
           width={250}
           height={250}
-          className="margin-auto"
+          className="m-auto"
         />
         <h2 className="text-2xl font-medium my-4">Agende sua consulta:</h2>
         <h2 className="text-1xl font-medium mb-4">
@@ -195,6 +196,34 @@ export const ContactForm = ({ id }: Items) => {
           {errors.rg && (
             <p className="text-xs text-white-text-color text-left mt-1">
               {errors.rg.message}
+            </p>
+          )}
+        </div>
+
+        <div className="mb-4">
+          <label
+            htmlFor="birthday"
+            className="block text-sm font-medium text-gray-700 text-left"
+          >
+            Data de nascimento
+          </label>
+          <div>
+            <InputMask
+              mask="99/99/9999"
+              {...register('birthday', {
+                required: 'Data de nascimento é obrigatório',
+                pattern: {
+                  message: 'Data de nascimento deve ter o formato 99/99/9999',
+                },
+              })}
+              type="text"
+              id="birthday"
+              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+            />
+          </div>
+          {errors.birthday && (
+            <p className="text-xs text-white-text-color text-left mt-1">
+              {errors.birthday.message}
             </p>
           )}
         </div>

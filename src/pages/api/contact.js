@@ -2,9 +2,8 @@ import nodemailer from 'nodemailer'
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { name, email, phone, cpf, rg, cep, message } = req.body
+    const { name, email, phone, cpf, rg, birthday, cep, message } = req.body
 
-    // Configurar o transporte do email
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -25,6 +24,7 @@ export default async function handler(req, res) {
           <p><strong>Telefone:</strong> ${phone}</p>
           <p><strong>CPF:</strong> ${cpf}</p>
           <p><strong>RG:</strong> ${rg}</p>
+          <p><strong>Data de nascimento:</strong> ${birthday}</p>
           <p><strong>CEP:</strong> ${cep}</p>
           <p><strong>Mensagem:</strong></p>
           <p>${message}</p>
