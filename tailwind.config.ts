@@ -18,6 +18,7 @@ const config: Config = {
       'secondary-text-color': '#c27e7e',
       'white-text-color': '#f7f6f4',
       'black-text-color': '#3E4140',
+      'error-text-color': '#FF0000',
     },
   },
   plugins: [],

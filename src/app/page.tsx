@@ -16,6 +16,7 @@ import { TextContent } from '../components/TextContent'
 import { ContentAction } from '../components/ContentAction'
 import { Footer } from '@/components/layout/Footer'
 import { menuItems } from '@/components/layout/Header/mock'
+import { ContactForm } from '@/components/ContactForm'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <TextContent items={infosTextContent} id="specialty" />
       <ContentAction />
       <TextContent items={infosBeforeAfter} id="result" />
+      <ContactForm id="form" />
       <Footer />
     </main>
   )
