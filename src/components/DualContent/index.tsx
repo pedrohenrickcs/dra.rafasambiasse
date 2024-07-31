@@ -33,7 +33,7 @@ export const DualContent = ({ items, id }: DualContentProps) => {
           width={300}
           height={300}
           alt="Rafaela Sambiasse"
-          className="m-auto"
+          className="m-auto rounded-3xl"
         />
         <div className="flex md:hidden justify-center">
           <Button type="primary" />
