@@ -76,7 +76,7 @@ export const ContactForm = ({ id }: Items) => {
             type="text"
             id="name"
             {...register('name', { required: 'Nome é obrigatório' })}
-            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border border- autofill:bg-primary-bg-color sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
           />
           {errors.name && (
             <p className="text-xs text-white-text-color text-left mt-1">
@@ -102,7 +102,7 @@ export const ContactForm = ({ id }: Items) => {
                 message: 'Email inválido',
               },
             })}
-            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
           />
           {errors.email && (
             <p className="text-xs text-white-text-color text-left mt-1">
@@ -123,7 +123,7 @@ export const ContactForm = ({ id }: Items) => {
               mask="(99) 99999-9999"
               type="tel"
               id="phone"
-              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
               {...register('phone', {
                 required: 'Telefone é obrigatório',
                 pattern: {
@@ -190,7 +190,7 @@ export const ContactForm = ({ id }: Items) => {
               })}
               type="text"
               id="rg"
-              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
             />
           </div>
           {errors.rg && (
@@ -220,7 +220,7 @@ export const ContactForm = ({ id }: Items) => {
               })}
               type="text"
               id="birthday"
-              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
             />
           </div>
           {errors.birthday && (
@@ -249,7 +249,7 @@ export const ContactForm = ({ id }: Items) => {
               })}
               type="text"
               id="cep"
-              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
             />
           </div>
           {errors.cep && (
@@ -269,7 +269,7 @@ export const ContactForm = ({ id }: Items) => {
           <textarea
             id="message"
             {...register('message', { required: 'Mensagem é obrigatória' })}
-            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-primary-500 sm:text-sm"
+            className="mt-1 block w-full px-3 py-2 bg-primary-light-bg-color rounded-md shadow-sm focus:outline-none focus:border focus:border-white-text-color autofill:bg-primary-bg-color sm:text-sm"
           ></textarea>
           {errors.message && (
             <p className="text-xs text-white-text-color text-left mt-1">

@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md'
 export const Footer = () => {
   return (
     <footer className="w-full bg-gray-800 text-white pt-8 bg-primary-bg-color text-white-bg-color">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-around">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-around md:items-start">
         <div className="mb-6 md:mb-0 flex justify-center">
           <Image src="/logo_v2.png" alt="Logo" width={250} height={250} />
         </div>
@@ -24,7 +24,7 @@ export const Footer = () => {
           <div className="flex justify-center md:justify-start items-center m-1">
             <FaWhatsapp size={20} color="#ffffff" />
             <a
-              href="https://wa.me/5511987654784"
+              href="https://api.whatsapp.com/send?phone=5511987654784&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento"
               target="_blank"
               className="ml-2"
             >

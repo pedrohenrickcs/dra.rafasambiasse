@@ -12,3 +12,8 @@
   background-image: url('../assets/banner.png');
   height: 470px;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #e09a99 inset;
+  -webkit-text-fill-color: #ffffff !important;
+}
